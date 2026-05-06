@@ -66,19 +66,18 @@ const useMetaTags = (metadata: {
 // PORTFOLIO DATA CONFIGURATION
 // ============================================================================
 const defaultPortfolioData = {
-  name: "LADY DIANE BAUZON CASILANG",
-  course: "BS in Information Technology",
-  school: "FEU Institute of Technology",
-  about: "I am a fourth-year IT student and freelance designer who integrates technical troubleshooting with creative insight to deliver innovative, efficient solutions.",
+  name: "Jeisha Lou Petancio",
+  course: "BSIT",
+  school: "BUKSU",
+  about: "I love filming and I love myself.",
   skills: [
-    "Graphic Design",
-    "UI / UX Design",
-    "Project Management",
-    "Full Stack Development",
-    "Web & App Development"
+    "UX/UI Design",
+    "Videography",
+    "Photography",
+    "Graphic Design"
   ],
-  linkedin: "https://www.linkedin.com/in/ldcasilang/",
-  github: "https://github.com/ldcasilang",
+  linkedin: "https://www.linkedin.com/in/kyokou-sel-28766a337/",
+  github: "https://github.com/kyokouusel",
 }
 
 // Network configuration
@@ -116,7 +115,7 @@ const PortfolioView = () => {
   const metaData = useMemo(() => ({
     title: `${portfolioData.name} | Sui Move Smart Contract Portfolio`,
     description: `${portfolioData.about.substring(0, 150)}...`,
-    image: `${window.location.origin}/meta-devcon-sui.png`,
+    image: `${window.location.origin}/profile.png`,
     url: window.location.href,
     keywords: `Sui Move, ${portfolioData.skills.join(', ')}, blockchain, ${portfolioData.course}, ${portfolioData.school}, smart contracts`
   }), [portfolioData]);
