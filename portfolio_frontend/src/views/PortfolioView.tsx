@@ -115,7 +115,7 @@ const PortfolioView = () => {
   const metaData = useMemo(() => ({
     title: `${portfolioData.name} | Sui Move Smart Contract Portfolio`,
     description: `${portfolioData.about.substring(0, 150)}...`,
-    image: `${window.location.origin}/profile.png`,
+    image: `${window.location.origin}/profile.jpg`,
     url: window.location.href,
     keywords: `Sui Move, ${portfolioData.skills.join(', ')}, blockchain, ${portfolioData.course}, ${portfolioData.school}, smart contracts`
   }), [portfolioData]);
@@ -253,12 +253,12 @@ const PortfolioView = () => {
           {/* Profile Image - Static local image only */}
           <div className="avatar">
             <img
-              src="/profile.png"
+              src="/profile.jpg"
               alt={portfolioData.name}
               crossOrigin="anonymous"
               onError={(e) => {
                 const img = e.currentTarget;
-                const fallbacks = ['/profile.webp', '/profile.jpg', '/profile.jpeg'];
+                const fallbacks = ['/profile.webp', '/profile.png', '/profile.jpeg'];
                 const currentSrc = img.src.split('/').pop() ?? '';
                 const nextIndex = fallbacks.findIndex(f => currentSrc.endsWith(f.replace('/', '')));
                 const next = nextIndex === -1 ? fallbacks[0] : fallbacks[nextIndex + 1];
